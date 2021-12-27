@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <!-- 나중에 잊어버리면 spring dtd로 검색해서 찾아서함... dtd는 규격을 정해 놓은것임... -->
+ 
+ <mapper namespace="com.totti.ex.lesson02.dao.UsedGoodsDAO">
+ 	
+ 	<!-- 메소드이름이 id로 들어감.
+ 	타입 형태대로 결과를 보여준다 
+ 	 -->
+ 	<select id="selectUsedGoodsList" resultType="com.totti.ex.lesson02.model.UsedGoods">
+ 		SELECT
+ 			`id`
+ 			,`title`
+ 			,`price`
+ 			,`description`
+ 			,`picture`
+ 			,`sellerId`
+ 			,`createdAt`
+ 			,`updatedAt`
+ 		FROM
+ 			`used_goods`
+ 		
+ 	</select>
+ 
+ 
+ </mapper>
+ 
+ 
