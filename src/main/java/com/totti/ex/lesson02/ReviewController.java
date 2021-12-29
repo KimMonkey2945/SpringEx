@@ -18,7 +18,7 @@ public class ReviewController {
 	public Review ex01(
 //			기본형태
 			@RequestParam("id") int id 
-//			@RequestParam("id") int id, @RequestParam("id") String name 이렇게 여러개 가능
+//			@RequestParam("id") int id, @RequestParam("name") String name 이렇게 여러개 가능
 //			@RequestParam(value="id", required = false, defaultValue="5") int id 
 //			기본이 필수 true로 저장되어있음.
 			
