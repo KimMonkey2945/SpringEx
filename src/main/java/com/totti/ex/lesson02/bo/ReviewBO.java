@@ -16,5 +16,14 @@ public class ReviewBO {
 		return reviewDAO.selectReview(id);
 	}
 	
+	//실행 성공한 개수 리턴
+	public int addReview(int storeId, String menu, String userName, double point, String review) {
+		return reviewDAO.insertReview(storeId, menu, userName, point, review);
+	}
+	
+	public int addReviewAsObject(Review review) {
+		return reviewDAO.insertReviewAsObject(review);
+	}
+	
 	
 }

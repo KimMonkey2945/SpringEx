@@ -4,6 +4,7 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="com.totti.ex.lesson02.dao.ReviewDAO">
+ 
  	<select id="selectReview" resultType="com.totti.ex.lesson02.model.Review" parameterType="int">
  		SELECT
  			`id`
@@ -18,8 +19,60 @@
  			`new_review`
  		WHERE
  			`id` = #{id}	
- 	
  	</select>
+ 	
+ 	<!--파라미터가 여러개면 map으로 넣으면 됨...  -->
+ 	<insert id="insertReview" parameterType="map">  
+ 		INSERT INTO `new_review`
+ 		(
+ 			`storeId`
+ 			,`menu`
+ 			,`userName`
+ 			,`point`
+ 			,`review`
+ 			,`createdAt`
+ 			,`updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			#{storeId}
+ 			,#{menu}
+ 			,#{userName}
+ 			,#{point}
+ 			,#{review}
+ 			,NOW()
+ 			,NOW()
+ 			
+ 		)
+  	</insert>
+ 
+ 	
+ 	<insert id="insertReviewAsObject" parameterType="com.totti.ex.lesson02.model.Review">
+ 		INSERT INTO `new_review`
+ 		(
+ 			`storeId`
+ 			,`menu`
+ 			,`userName`
+ 			,`point`
+ 			,`review`
+ 			,`createdAt`
+ 			,`updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			#{storeId}
+ 			,#{menu}
+ 			,#{userName}
+ 			,#{point}
+ 			,#{review}
+ 			,NOW()
+ 			,NOW()
+ 		)
+ 		<!-- 위에는 리뷰클래스의(모델) 멤버변수 이름과 일치시키면 됨...  -->
+ 		
+ 	</insert>
+ 
+ 
  
  
  </mapper>
