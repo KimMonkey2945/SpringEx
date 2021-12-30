@@ -30,15 +30,15 @@ public class ReviewController {
 	@RequestMapping("/lesson03/ex02")
 	public String ex02() {
 		//4, "콤비네이션피자", "김바다", 4.5, "할인도 많이 받고 잘 먹었습니다!!"  이 내용을 insert
-//		int count = reviewBO.addReview(4, "콤비네이션피자", "김바다", 4.5, "할인도 많이 받고 잘 먹었습니다.");
+		int count = reviewBO.addReview(4, "콤비네이션피자", "김바다", 4.5, "할인도 많이 받고 잘 먹었습니다.");
 		
-		Review review = new Review();
-		review.setStoreId(4);
-		review.setMenu("콤비네이션 피자");
-		review.setUserName("김바다");
-		review.setPoint(4.5);
-		review.setReview("222222222");
-		int count = reviewBO.addReviewAsObject(review);
+//		Review review = new Review();
+//		review.setStoreId(4);
+//		review.setMenu("콤비네이션 피자");
+//		review.setUserName("김바다");
+//		review.setPoint(4.5);
+//		review.setReview("222222222");
+//		int count = reviewBO.addReviewAsObject(review);
 		
 		return "입력 결과" + count;
 	}
