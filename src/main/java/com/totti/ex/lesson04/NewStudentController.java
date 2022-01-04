@@ -21,18 +21,20 @@ public class NewStudentController {
 	public String addStudentView() {
 		return "lesson04/addStudent";
 	}
-	@ResponseBody
+	
+//	@ResponseBody
 //	@RequestMapping(path = "/lesson04/ex02/ass_student" , method = RequestMethod.post)
+//	@GetMapping("/lesson04/ex02/add_student")
+	//post는 일반적으로 주소창에 입력해서 접근이 안되는 것임....
 	@PostMapping("/lesson04/ex02/add_student")
-//	@GetMapping("/lesson04/ex02/ass_student")
 	public String addStudent(@ModelAttribute NewStudent student,
 			Model model) {
 
 		int count = newStudentBO.addStudent(student);
-		return "입력성공 : " + count;
+//		return "입력성공 : " + count;
 			
-//			model.addAttribute("result", student);
-//			return "lesson04/studentInfo";
+			model.addAttribute("result", student);
+			return "lesson04/studentInfo";
 			
 	}
 	

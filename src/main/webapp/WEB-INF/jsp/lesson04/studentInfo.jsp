@@ -25,11 +25,14 @@
 
 
 	<div class="container">
+		<div>id</div>
+		<div><b>${result.id }</b></div>
+	
 		<div>이름</div>
 		<div>${result.name}</div>
 		
 		<div>휴대폰번호</div>
-		<div>${result.phonNumber }</div>
+		<div>${result.phoneNumber }</div>
 	
 	
 	</div>

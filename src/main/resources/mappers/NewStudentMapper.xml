@@ -5,7 +5,8 @@
  
  <mapper namespace="com.totti.ex.lesson04.dao.NewStudentDAO">
  
- 	<insert id="insertStudent" parameterType="com.totti.ex.lesson04.model.NewStudent">
+ 	<insert id="insertStudent" parameterType="com.totti.ex.lesson04.model.NewStudent"
+ 	useGeneratedKeys="true" keyProperty="id"> <!-- 파라미터가 꼭 클래스 객체형태여야함.... -->
  		INSERT INTO `new_student`
  		(
  			`name`
