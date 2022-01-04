@@ -21,17 +21,19 @@ public class NewStudentController {
 	public String addStudentView() {
 		return "lesson04/addStudent";
 	}
-	
+	@ResponseBody
 //	@RequestMapping(path = "/lesson04/ex02/ass_student" , method = RequestMethod.post)
 	@PostMapping("/lesson04/ex02/add_student")
 //	@GetMapping("/lesson04/ex02/ass_student")
 	public String addStudent(@ModelAttribute NewStudent student,
 			Model model) {
-			int count = newStudentBO.addStudent(student);
+
+		int count = newStudentBO.addStudent(student);
+		return "입력성공 : " + count;
 			
-			model.addAttribute("result", student);
+//			model.addAttribute("result", student);
+//			return "lesson04/studentInfo";
 			
-			return "lesson04/studentInfo";
 	}
 	
 }

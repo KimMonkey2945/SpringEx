@@ -11,6 +11,7 @@ public class NewStudentBO {
 	
 	@Autowired
 	private NewStudentDAO newStudentDAO;
+	
 	public int addStudent(NewStudent student) {
 		return newStudentDAO.insertStudent(student);
 	}

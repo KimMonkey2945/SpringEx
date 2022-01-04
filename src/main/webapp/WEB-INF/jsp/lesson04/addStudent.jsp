@@ -19,7 +19,6 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 	crossorigin="anonymous"></script>
-	
 <title>학생정보입력</title>
 </head>
 <body>
@@ -28,18 +27,18 @@
 			<div class="container">
 				<h1>학생정보 추가</h1>
 					<label>이름</label>
-					<input type="text" class="form-container" name="name">
+					<input type="text" class="form-control" name="name">
 					
 					<label>휴대폰 번호</label>
-					<input type="text" class="form-container" name="phoneNumber">
+					<input type="text" class="form-control" name="phoneNumber">
 					
 					<label>이메일 주소</label>
-					<input type="text" class="form-container" name="email">
+					<input type="text" class="form-control" name="email">
 					
 					<label>장래 희망</label>
-					<input type="text" class="form-container" name="dreamJob">
+					<input type="text" class="form-control" name="dreamJob">
 					
-					<button class="btn" type="submit">추가</button>
+					<button class="btn mt-3" type="submit">추가</button>
 					
 			</div>
 		</form>
