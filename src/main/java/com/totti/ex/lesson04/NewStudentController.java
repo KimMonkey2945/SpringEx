@@ -30,7 +30,7 @@ public class NewStudentController {
 	public String addStudent(@ModelAttribute NewStudent student,
 			Model model) {
 
-		int count = newStudentBO.addStudent(student);
+		 newStudentBO.addStudent(student);
 //		return "입력성공 : " + count;
 			
 			model.addAttribute("result", student);
