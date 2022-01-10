@@ -41,7 +41,7 @@ public class NewUserController {
 	
 	@RequestMapping("/ex01/2")
 	public String getUser(Model model) {
-		New_User user = newUserBO.getUser(12);
+		New_User user = newUserBO.getUser(3);
 		
 		model.addAttribute("result", user);   //모델에 세팅하는법 키는 내가 정하면됨.... 사용법임...
 		model.addAttribute("subject", "회원정보");
