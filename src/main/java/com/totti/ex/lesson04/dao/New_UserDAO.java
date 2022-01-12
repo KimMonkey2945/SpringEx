@@ -19,5 +19,8 @@ public interface New_UserDAO {
 	
 	public New_User selectUser(@Param("id") int id);
 	
+	//여기서는 불린이 아님 쿼리 입장에서는 중복되는 개수가 몇개인지 알려주는 것임.
+	//명확하게 할일을 구분해주는 것임
+	public int selectCountName(@Param("name") String name);
 	
 }

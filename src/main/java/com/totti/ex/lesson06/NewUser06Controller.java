@@ -1,5 +1,8 @@
 package com.totti.ex.lesson06;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,5 +44,34 @@ public class NewUser06Controller {
 	 
 	 //	 return "삽입 성공 : " + count; 이렇게 할 필요없음.
 	}
+	
+	
+	//api를 만드는 것임.
+	@ResponseBody
+	@GetMapping("/lesson06/ex02/duplicate_name")
+	public Map<String, String> duplicateName(@RequestParam("name") String name) {
+		Map<String, String> result = new HashMap<>(); //맵 만들어서 리턴하면 알아서 json으로 만들어줌
+		
+		
+		if(newUserBO.isDuplicateName(name)) {	
+			result.put("isDuplicate", "true");
+		}else {
+			result.put("Duplicate", "false");
+		}
+		
+		return result;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
