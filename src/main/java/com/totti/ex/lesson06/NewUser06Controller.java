@@ -30,7 +30,7 @@ public class NewUser06Controller {
 	,@RequestParam("introduce") String introduce
 	,@RequestParam("email") String email) {
 		
-	 int count=newUserBO.addUser(name, yyyymmdd, email, introduce);
+	 int count = newUserBO.addUser(name, yyyymmdd, email, introduce);
 	 
 	 if(count == 1) {
 		 return "success";
