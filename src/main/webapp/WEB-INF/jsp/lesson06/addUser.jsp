@@ -73,6 +73,10 @@
 						//alert("입력 실패");
 					//} 이렇게 표현도 가능...  responssbody는 api를 만들때 사용,  api(요청하고 순수한 데이터형태로 받는것)가 뭔지 찾아볼것. 규격화된 형태로 전달해준다 == ajax
 					
+<<<<<<< HEAD
+=======
+						
+>>>>>>> ebcfac12f579a551ee5f2b5b777ffe43a5af4a13
 					error:function(){
 						alert("에러발생")
 					}
