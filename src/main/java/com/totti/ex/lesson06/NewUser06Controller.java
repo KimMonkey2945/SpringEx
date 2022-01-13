@@ -56,7 +56,7 @@ public class NewUser06Controller {
 		if(newUserBO.isDuplicateName(name)) {	
 			result.put("isDuplicate", "true");
 		}else {
-			result.put("Duplicate", "false");
+			result.put("isDuplicate", "false");
 		}
 		
 		return result;
